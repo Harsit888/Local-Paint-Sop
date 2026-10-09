@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maa Bhagwati Paints and Colors | Authorized Paint Dealer</title>
+  <title>Maa Bhagwati Paints and Colors | Authorized Dealer & Waterproofing Experts</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,10 +41,10 @@
 
   <!-- Top Announcement Bar -->
   <div class="bg-slate-900 text-slate-200 text-sm py-2 px-4 text-center flex justify-between items-center max-w-7xl mx-auto">
-    <span><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i> Main Market Road, Bharthana</span>
+    <span><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i> Main Market Road, Bharthana, UP</span>
     <span class="hidden sm:inline"><i class="fa-solid fa-clock text-amber-400 mr-2"></i> Mon-Sat: 8:00 AM - 8:00 PM</span>
-    <a href="https://wa.me/919876543210" target="_blank" class="hover:underline font-bold text-emerald-400">
-      <i class="fa-brands fa-whatsapp mr-1"></i> +91 98765 43210
+    <a href="tel:919876543210" class="hover:underline font-bold text-amber-400">
+      <i class="fa-solid fa-phone mr-1"></i> +91 98765 43210
     </a>
   </div>
 
@@ -52,14 +52,16 @@
   <nav class="bg-white shadow-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <a href="#" class="text-xl md:text-2xl font-extrabold text-blue-900 tracking-wide flex items-center gap-2">
-        <i class="fa-solid fa-paint-roller text-blue-600"></i> Maa Bhagwati Paints & Colors
+        <i class="fa-solid fa-paint-roller text-blue-600"></i> Maa Bhagwati Paints
       </a>
-      <ul class="hidden md:flex space-x-6 font-semibold text-slate-700">
+      <ul class="hidden lg:flex space-x-6 font-semibold text-slate-700">
         <li><a href="#products" class="hover:text-blue-600 transition">Paint Store</a></li>
         <li><a href="#visualizer" class="hover:text-blue-600 transition">Wall Visualizer</a></li>
+        <li><a href="#shadecards" class="hover:text-blue-600 transition">Shade Cards</a></li>
         <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
-        <li><a href="#calculator" class="hover:text-blue-600 transition">Paint Calculator</a></li>
-        <li><a href="#contact" class="hover:text-blue-600 transition">Contact Us</a></li>
+        <li><a href="#painters" class="hover:text-blue-600 transition">Find Painters</a></li>
+        <li><a href="#calculator" class="hover:text-blue-600 transition">Calculator</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
       </ul>
       <div class="flex items-center gap-3">
         <button onclick="toggleCartModal()" class="relative bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-2 px-3 rounded-lg border border-slate-300 transition flex items-center gap-2">
@@ -87,7 +89,7 @@
         </p>
         <div class="mt-6 flex flex-wrap gap-4">
           <a href="#products" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 rounded-lg shadow transition">
-            Explore Paint Store
+            Browse Paint Store
           </a>
           <a href="#visualizer" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition flex items-center gap-2">
             <i class="fa-solid fa-sliders"></i> Try Wall Visualizer
@@ -141,4 +143,730 @@
   <section id="visualizer" class="py-16 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="bg-blue-500/20
+        <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Live Wall Preview</span>
+        <h2 class="text-3xl font-extrabold mt-2">See How Colors Look On Real Walls</h2>
+        <p class="text-slate-400 mt-2">Use the color slider to preview wall paint shades with matching furniture.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 items-center bg-slate-800 p-6 md:p-8 rounded-3xl border border-slate-700 shadow-2xl">
+        <div class="md:col-span-2 relative rounded-2xl overflow-hidden shadow-2xl h-80 sm:h-96 bg-slate-950 flex items-center justify-center border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&auto=format&fit=crop&q=80" alt="Living Room Wall" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40">
+          <div id="wallOverlay" class="absolute inset-0 transition-colors duration-500 opacity-70" style="background-color: #2563eb;"></div>
+          <div class="relative z-10 text-center p-6 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-slate-700 max-w-md mx-4 shadow-xl">
+            <span id="visualizerBadge" class="text-xs uppercase font-extrabold tracking-widest text-amber-400 block mb-1">Ocean Blue Emulsion</span>
+            <h3 id="visualizerColorName" class="text-2xl font-black text-white">Royal Blue Shade #2563EB</h3>
+            <p class="text-slate-300 text-xs mt-2">Ideal for living rooms, master bedrooms, and accent feature walls.</p>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h3 class="text-lg font-bold border-b border-slate-700 pb-2 flex items-center gap-2">
+            <i class="fa-solid fa-palette text-amber-400"></i> Color Wall Slider
+          </h3>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2 flex justify-between">
+              <span>Hue / Color Tone Slider</span>
+              <span id="hueValueText" class="text-amber-400 font-bold">220°</span>
+            </label>
+            <input type="range" id="hueSlider" min="0" max="360" value="220" oninput="updateWallVisualizer()" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-blue-500">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-2 flex justify-between">
+              <span>Brightness / Finish Intensity</span>
+              <span id="lightnessValueText" class="text-amber-400 font-bold">50%</span>
+            </label>
+            <input type="range" id="lightnessSlider" min="20" max="80" value="50" oninput="updateWallVisualizer()" class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-500">
+          </div>
+
+          <div>
+            <p class="text-xs font-bold uppercase text-slate-400 mb-2">Preset Room Color Themes</p>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="setWallPreset(210, 45, 'Royal Sapphire')" class="h-10 rounded-lg bg-blue-600 hover:scale-105 transition border border-white/20 flex items-center justify-center text-xs font-bold">Blue</button>
+              <button onclick="setWallPreset(150, 40, 'Emerald Green')" class="h-10 rounded-lg bg-emerald-600 hover:scale-105 transition border border-white/20 flex items-center justify-center text-xs font-bold">Green</button>
+              <button onclick="setWallPreset(350, 50, 'Crimson Velvet')" class="h-10 rounded-lg bg-rose-600 hover:scale-105 transition border border-white/20 flex items-center justify-center text-xs font-bold">Rose</button>
+              <button onclick="setWallPreset(35, 55, 'Warm Sunshine')" class="h-10 rounded-lg bg-amber-500 hover:scale-105 transition border border-white/20 flex items-center justify-center text-xs font-bold">Yellow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paint Store Product Catalog with Containers & Prices -->
+  <section id="products" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Official Brand Paint Store</h2>
+        <p class="text-slate-600 mt-2">Select paint bucket capacities (1L, 4L, 10L, 20L) and order directly online.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGridContainer">
+        <!-- Products populated dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Shade Cards Section -->
+  <section id="shadecards" class="py-16 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Digital Color Shade Cards</h2>
+        <p class="text-slate-600 mt-2">Explore official color palettes and shade codes directly from the manufacturers.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">AP</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-1">Asian Paints Color Spectra</h3>
+          <p class="text-slate-500 text-xs mb-4">2,200+ shades for Royale, Apex Ultima, & Tractor Emulsion.</p>
+          <a href="https://wa.me/919876543210?text=Please%20send%20me%20Asian%20Paints%20Shade%20Card%20PDF" target="_blank" class="w-full inline-block py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition text-sm">Request PDF Shade Card</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">BP</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-1">Berger Silk Shade World</h3>
+          <p class="text-slate-500 text-xs mb-4">Designer wall textures, Silk Glamor, & WeatherCoat shades.</p>
+          <a href="https://wa.me/919876543210?text=Please%20send%20me%20Berger%20Paints%20Shade%20Card%20PDF" target="_blank" class="w-full inline-block py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-xl transition text-sm">Request PDF Shade Card</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+          <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-xl mx-auto mb-4">KN</div>
+          <h3 class="text-xl font-bold text-slate-900 mb-1">Nerolac Color Palettes</h3>
+          <p class="text-slate-500 text-xs mb-4">Japanese technology HD colors, Beauty Gold, & Impressions.</p>
+          <a href="https://wa.me/919876543210?text=Please%20send%20me%20Nerolac%20Shade%20Card%20PDF" target="_blank" class="w-full inline-block py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition text-sm">Request PDF Shade Card</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Services Section -->
+  <section id="services" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold text-slate-900">Our Specialty Services</h2>
+        <p class="text-slate-600 mt-2">More than just selling paint—we help you build and protect your space.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-droplet-slash"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Waterproofing Solutions</h3>
+          <p class="text-slate-600 text-sm">Specialized damp-proofing treatment for roofs, basements, and seepage-prone walls using Dr. Fixit & SmartCare.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Computer Tinting Machine</h3>
+          <p class="text-slate-600 text-sm">Exact spectral shade mixing using automated computer tinting dispensers in less than 5 minutes.</p>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl shadow-sm border border-slate-200">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Wholesale & Site Delivery</h3>
+          <p class="text-slate-600 text-sm">Bulk pricing for contractors and builders with free local site delivery for large bucket orders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Painter Network Directory Section -->
+  <section id="painters" class="py-16 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="bg-amber-500/20 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Trusted Local Professionals</span>
+        <h2 class="text-3xl font-extrabold mt-2">Connect With Verified Painters</h2>
+        <p class="text-slate-400 mt-2">Need experienced painters for wall putty, texture work, or exterior coating? Get free estimates.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-amber-500 text-slate-900 font-extrabold text-lg rounded-full flex items-center justify-center">RP</div>
+            <div>
+              <h4 class="font-bold text-lg text-white">Rajesh Painting Team</h4>
+              <p class="text-xs text-amber-400">12+ Years Exp | Texture & Royale Specialist</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs mb-4">Specialized in Asian Paints Royale Play textures, wallpaper application, and enamel polish.</p>
+          <a href="https://wa.me/919876543210?text=I%20want%20Rajesh%20Painter%20contact%20details" target="_blank" class="block w-full text-center py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg text-xs transition">Request Contractor Contact</a>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-blue-500 text-white font-extrabold text-lg rounded-full flex items-center justify-center">VK</div>
+            <div>
+              <h4 class="font-bold text-lg text-white">Verma Waterproofing & Coating</h4>
+              <p class="text-xs text-blue-400">8+ Years Exp | Exterior & Seepage Expert</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-xs mb-4">Expert in roof waterproofing, Dr. Fixit chemical coating, putty sanding, and spray painting.</p>
+          <a href="https://wa.me/919876543210?text=I%20want%20Verma%20Waterproofing%20contact%20details" target="_blank" class="block w-full text-center py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg text-xs transition">Request Contractor Contact</a>
+        </div>
+
+        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 flex flex-col justify-between">
+          <div>
+            <h4 class="font-bold text-lg text-white mb-2"><i class="fa-solid fa-user-plus text-amber-400 mr-2"></i> Are You A Local Painter?</h4>
+            <p class="text-slate-300 text-xs mb-4">Register with Maa Bhagwati Paints to get direct customer job leads and painter reward points.</p>
+          </div>
+          <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20a%20painter%20and%20want%20to%20register" target="_blank" class="block w-full text-center py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold rounded-lg text-xs transition">Register As Painter Partner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paint Calculator Section -->
+  <section id="calculator" class="py-16 max-w-5xl mx-auto px-4">
+    <div class="bg-white rounded-2xl shadow-lg p-8 border border-slate-100">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-3xl font-extrabold text-slate-900">Paint Quantity Calculator (Liters)</h2>
+        <p class="text-slate-600 mt-2">Calculate how many liters of paint you need before placing an order.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div>
+          <label class="block text-sm font-bold text-slate-700 mb-2">Total Wall Length (ft)</label>
+          <input type="number" id="perimeter" placeholder="e.g. 40" class="w-full border border-slate-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-slate-700 mb-2">Wall Height (ft)</label>
+          <input type="number" id="height" placeholder="e.g. 10" class="w-full border border-slate-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-slate-700 mb-2">Number of Coats</label>
+          <select id="coats" class="w-full border border-slate-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="2">2 Coats (Recommended)</option>
+            <option value="1">1 Coat (Touch-up / Primer)</option>
+            <option value="3">3 Coats (Drastic Color Change)</option>
+          </select>
+        </div>
+      </div>
+
+      <button onclick="calculatePaintInLiters()" class="w-full mt-6 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg shadow transition">
+        Calculate Liters Needed
+      </button>
+
+      <div id="calcResult" class="hidden mt-6 p-4 bg-slate-50 border border-slate-200 rounded-lg">
+        <p class="text-slate-700 font-medium" id="calcArea"></p>
+        <p class="text-xl font-bold text-blue-900 mt-1" id="calcLiters"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section id="contact" class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Visit Maa Bhagwati Paints & Colors</h2>
+        <p class="text-slate-600 mb-6">Stop by for shade cards, waterproofing advice, painter contacts, and wholesale discount pricing.</p>
+        
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-map-location-dot text-xl"></i></div>
+            <div>
+              <h4 class="font-bold text-slate-900">Address</h4>
+              <p class="text-slate-600">Main Market Road, Bharthana, District Etawah, UP - 206242</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i class="fa-solid fa-clock text-xl"></i></div>
+            <div>
+              <h4 class="font-bold text-slate-900">Store Hours</h4>
+              <p class="text-slate-600">Monday - Saturday: 8:00 AM – 8:00 PM</p>
+              <p class="text-slate-600">Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Embedded Google Maps Frame -->
+        <div class="w-full h-64 rounded-xl overflow-hidden shadow-inner border border-slate-200 mt-6">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14300.0!2d79.23!3d26.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3975d04df16b17fd%3A0x2d1746eb34346e92!2sBharthana%2C%20Uttar%20Pradesh%20206242!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div id="quote" class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+        <h3 class="text-xl font-bold text-slate-900 mb-4">Send an Inquiry or Quote Request</h3>
+        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
+            <input type="text" required class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Phone Number / WhatsApp</label>
+            <input type="tel" required class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-slate-700 mb-1">Inquiry / Details</label>
+            <textarea rows="3" required placeholder="Specify brand, shade code, or bucket volume (e.g., 20L Apex Ultima)..." class="w-full p-2.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg transition">
+            Submit Inquiry
+          </button>
+        </form>
+        <p id="formStatus" class="hidden text-green-600 font-semibold mt-3 text-center"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Modal -->
+  <div id="cartModal" class="fixed inset-0 bg-slate-950/70 z-50 hidden backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-xl rounded-2xl shadow-2xl overflow-hidden border border-slate-200 max-h-[90vh] flex flex-col">
+      <div class="p-5 bg-slate-900 text-white flex justify-between items-center">
+        <h3 class="text-xl font-bold flex items-center gap-2">
+          <i class="fa-solid fa-cart-shopping text-amber-400"></i> Your Shopping Cart
+        </h3>
+        <button onclick="toggleCartModal()" class="text-slate-400 hover:text-white text-2xl font-bold">&times;</button>
+      </div>
+
+      <div id="cartItemsContainer" class="p-6 overflow-y-auto flex-grow space-y-4">
+        <!-- Cart items populated via JS -->
+      </div>
+
+      <div class="p-6 bg-slate-50 border-t border-slate-200">
+        <div class="flex justify-between text-lg font-bold text-slate-900 mb-4">
+          <span>Grand Total:</span>
+          <span id="cartGrandTotalText" class="text-blue-900">₹0</span>
+        </div>
+        <div class="flex gap-3">
+          <button onclick="toggleCartModal()" class="w-1/2 py-3 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl transition">Continue Shopping</button>
+          <button onclick="openCheckoutModal()" class="w-1/2 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition shadow flex items-center justify-center gap-2">
+            <i class="fa-solid fa-lock"></i> Checkout & Pay
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Online Payment & Receipt Modal -->
+  <div id="paymentModal" class="fixed inset-0 bg-slate-950/80 z-50 hidden backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
+      <div class="p-5 bg-slate-900 text-white flex justify-between items-center">
+        <h3 class="text-lg font-bold flex items-center gap-2">
+          <i class="fa-solid fa-qrcode text-emerald-400"></i> Online UPI Payment
+        </h3>
+        <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-white text-2xl font-bold">&times;</button>
+      </div>
+
+      <div class="p-6 text-center space-y-4">
+        <p class="text-sm text-slate-600">Scan QR Code using PhonePe, Google Pay, or Paytm</p>
+
+        <!-- Simulated UPI QR Code -->
+        <div class="p-4 bg-white border-2 border-dashed border-slate-300 rounded-2xl inline-block shadow-inner">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=9876543210@upi&pn=MaaBhagwatiPaints" alt="UPI Payment QR Code" class="mx-auto rounded-lg">
+          <p class="text-xs font-bold text-slate-500 mt-2">UPI ID: 9876543210@upi</p>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-3 text-left">
+          <p class="text-xs text-blue-900 font-semibold">Order Summary:</p>
+          <p id="paymentAmountText" class="text-2xl font-extrabold text-blue-900">₹0</p>
+        </div>
+
+        <button onclick="simulateSuccessfulPayment()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-circle-check"></i> I Have Paid / Confirm Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Printable Bill Receipt Modal -->
+  <div id="receiptModal" class="fixed inset-0 bg-slate-950/80 z-50 hidden backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden border border-slate-200 p-6 space-y-6">
+      <div id="receiptPrintArea" class="p-4 border border-slate-300 rounded-xl bg-slate-50">
+        <div class="text-center border-b border-slate-300 pb-4">
+          <h2 class="text-xl font-extrabold text-slate-900">Maa Bhagwati Paints & Colors</h2>
+          <p class="text-xs text-slate-600">Main Market Road, Bharthana, UP - 206242</p>
+          <p class="text-xs text-slate-600">GSTIN: 09ABCDE1234F1ZH | Ph: +91 98765 43210</p>
+        </div>
+
+        <div class="py-3 border-b border-slate-200 flex justify-between text-xs text-slate-600">
+          <span>Receipt #: <strong id="receiptNoText">MBP-8921</strong></span>
+          <span>Date: <strong id="receiptDateText">09/10/2026</strong></span>
+        </div>
+
+        <div class="py-3">
+          <p class="text-xs font-bold uppercase text-slate-400 mb-2">Purchased Items</p>
+          <div id="receiptItemsList" class="space-y-2 text-sm">
+            <!-- Receipt items inserted via JS -->
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-300 flex justify-between font-bold text-base text-slate-900">
+          <span>Total Paid (Inclusive of GST):</span>
+          <span id="receiptTotalText">₹0</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button onclick="printReceipt()" class="w-1/2 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-print"></i> Print Receipt
+        </button>
+        <button onclick="closeReceiptModal()" class="w-1/2 py-3 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-xl transition">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+    <p>&copy; Maa Bhagwati Paints and Colors. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating WhatsApp Chat Button -->
+  <a href="https://wa.me/919876543210?text=Hello%20Maa%20Bhagwati%20Paints,%20I%20have%20an%20inquiry%20regarding%20paint%20shades%20and%20pricing." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center group transition-all duration-300 hover:scale-110"
+     aria-label="Chat with Maa Bhagwati Paints on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-bold pl-0 group-hover:pl-2">
+      Chat on WhatsApp
+    </span>
+    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+    </span>
+  </a>
+
+  <!-- Embedded JavaScript Logic -->
+  <script>
+    // Product Catalog Database
+    const paintProducts = [
+      {
+        id: "asian-royale",
+        brand: "Asian Paints",
+        name: "Royale Luxury Emulsion",
+        finish: "Teflon Surface Protection / Sheen",
+        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 520, "4L": 1980, "10L": 4750, "20L": 9200 }
+      },
+      {
+        id: "berger-silk",
+        brand: "Berger Paints",
+        name: "Silk Glamor Luxury Emulsion",
+        finish: "Rich Satin Finish & Easy Clean",
+        image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 480, "4L": 1820, "10L": 4350, "20L": 8500 }
+      },
+      {
+        id: "nerolac-impression",
+        brand: "Nerolac Paints",
+        name: "Impression Ultra HD Emulsion",
+        finish: "High Gloss & Washable",
+        image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 460, "4L": 1750, "10L": 4100, "20L": 8100 }
+      },
+      {
+        id: "dulux-velvet",
+        brand: "Dulux Paints",
+        name: "Velvet Touch Diamond Emulsion",
+        finish: "Smooth Pearl Sheen",
+        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 510, "4L": 1940, "10L": 4600, "20L": 9000 }
+      },
+      {
+        id: "shalimar-weather",
+        brand: "Shalimar Paints",
+        name: "Weather Pro Exterior Emulsion",
+        finish: "Heavy Rain & Anti-Fungal Guard",
+        image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 390, "4L": 1480, "10L": 3500, "20L": 6800 }
+      },
+      {
+        id: "jewel-emulsion",
+        brand: "Jewel Paints",
+        name: "Jewel Premium Wall Finish",
+        finish: "Smooth Interior Matte Finish",
+        image: "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&auto=format&fit=crop&q=80",
+        prices: { "1L": 350, "4L": 1320, "10L": 3100, "20L": 5900 }
+      }
+    ];
+
+    // State Management
+    let cart = [];
+    const selectedCapacities = {};
+
+    // Initialization
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts();
+      updateWallVisualizer();
+    });
+
+    // Render Product Cards
+    function renderProducts() {
+      const container = document.getElementById("productGridContainer");
+      container.innerHTML = "";
+
+      paintProducts.forEach(prod => {
+        selectedCapacities[prod.id] = selectedCapacities[prod.id] || "20L";
+        const currentCap = selectedCapacities[prod.id];
+        const currentPrice = prod.prices[currentCap];
+
+        const card = document.createElement("div");
+        card.className = "bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="relative h-48 overflow-hidden bg-slate-100">
+              <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-slate-900/90 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">${prod.brand}</span>
+            </div>
+            
+            <div class="p-6">
+              <h3 class="text-xl font-extrabold text-slate-900">${prod.name}</h3>
+              <p class="text-xs text-slate-500 mt-1">${prod.finish}</p>
+
+              <!-- Capacity Selector Buttons -->
+              <div class="mt-4">
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Select Bucket Size</label>
+                <div class="grid grid-cols-4 gap-2">
+                  ${["1L", "4L", "10L", "20L"].map(cap => `
+                    <button onclick="selectProductCapacity('${prod.id}', '${cap}')" class="py-2 text-xs font-bold rounded-lg border transition ${cap === currentCap ? 'bg-blue-600 text-white border-blue-600 shadow-sm' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'}">
+                      ${cap}
+                    </button>
+                  `).join('')}
+                </div>
+              </div>
+
+              <!-- Price Display -->
+              <div class="mt-6 flex justify-between items-center">
+                <div>
+                  <span class="text-xs text-slate-400 block">Price (${currentCap}):</span>
+                  <span class="text-2xl font-extrabold text-blue-900">₹${currentPrice.toLocaleString()}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="addToCart('${prod.id}')" class="w-full py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-cart-plus"></i> Add To Cart
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectProductCapacity(productId, capacity) {
+      selectedCapacities[productId] = capacity;
+      renderProducts();
+    }
+
+    // Wall Visualizer Logic
+    function updateWallVisualizer() {
+      const hue = document.getElementById("hueSlider").value;
+      const lightness = document.getElementById("lightnessSlider").value;
+      
+      document.getElementById("hueValueText").innerText = `${hue}°`;
+      document.getElementById("lightnessValueText").innerText = `${lightness}%`;
+
+      const overlay = document.getElementById("wallOverlay");
+      overlay.style.backgroundColor = `hsl(${hue}, 70%, ${lightness}%)`;
+
+      document.getElementById("visualizerColorName").innerText = `Wall Tone HSL(${hue}, 70%, ${lightness}%)`;
+    }
+
+    function setWallPreset(hue, lightness, name) {
+      document.getElementById("hueSlider").value = hue;
+      document.getElementById("lightnessSlider").value = lightness;
+      document.getElementById("visualizerBadge").innerText = name;
+      updateWallVisualizer();
+    }
+
+    // Shopping Cart Logic
+    function addToCart(productId) {
+      const prod = paintProducts.find(p => p.id === productId);
+      const cap = selectedCapacities[productId];
+      const price = prod.prices[cap];
+
+      const existingIndex = cart.findIndex(item => item.id === productId && item.capacity === cap);
+      if (existingIndex > -1) {
+        cart[existingIndex].qty += 1;
+      } else {
+        cart.push({
+          id: productId,
+          brand: prod.brand,
+          name: prod.name,
+          capacity: cap,
+          price: price,
+          qty: 1
+        });
+      }
+
+      updateCartBadge();
+      toggleCartModal();
+    }
+
+    function updateCartBadge() {
+      const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById("cartCountBadge").innerText = totalQty;
+    }
+
+    function toggleCartModal() {
+      const modal = document.getElementById("cartModal");
+      modal.classList.toggle("hidden");
+      renderCartItems();
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById("cartItemsContainer");
+      container.innerHTML = "";
+
+      if (cart.length === 0) {
+        container.innerHTML = `<p class="text-center text-slate-500 py-8">Your cart is empty.</p>`;
+        document.getElementById("cartGrandTotalText").innerText = "₹0";
+        return;
+      }
+
+      let total = 0;
+      cart.forEach((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+
+        const row = document.createElement("div");
+        row.className = "flex justify-between items-center p-3 bg-slate-50 rounded-xl border border-slate-200 text-sm";
+        row.innerHTML = `
+          <div>
+            <h4 class="font-bold text-slate-900">${item.name}</h4>
+            <p class="text-xs text-slate-500">${item.brand} - Bucket Size: ${item.capacity}</p>
+            <p class="text-xs font-bold text-blue-900 mt-1">₹${item.price} x ${item.qty} = ₹${itemTotal}</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="changeQty(${idx}, -1)" class="w-7 h-7 bg-slate-200 hover:bg-slate-300 font-bold rounded-lg flex items-center justify-center">-</button>
+            <span class="font-bold">${item.qty}</span>
+            <button onclick="changeQty(${idx}, 1)" class="w-7 h-7 bg-slate-200 hover:bg-slate-300 font-bold rounded-lg flex items-center justify-center">+</button>
+            <button onclick="removeItem(${idx})" class="ml-2 text-red-500 hover:text-red-700 text-lg"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        `;
+        container.appendChild(row);
+      });
+
+      document.getElementById("cartGrandTotalText").innerText = `₹${total.toLocaleString()}`;
+    }
+
+    function changeQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) cart.splice(index, 1);
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartBadge();
+      renderCartItems();
+    }
+
+    // Online Checkout & Bill Receipt Generation
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+      toggleCartModal();
+      const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
+      document.getElementById("paymentAmountText").innerText = `₹${total.toLocaleString()}`;
+      document.getElementById("paymentModal").classList.remove("hidden");
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById("paymentModal").classList.add("hidden");
+    }
+
+    function simulateSuccessfulPayment() {
+      closeCheckoutModal();
+      generateReceipt();
+      cart = [];
+      updateCartBadge();
+    }
+
+    function generateReceipt() {
+      const list = document.getElementById("receiptItemsList");
+      list.innerHTML = "";
+      let grandTotal = 0;
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.qty;
+        grandTotal += itemTotal;
+        const div = document.createElement("div");
+        div.className = "flex justify-between border-b border-slate-100 pb-1";
+        div.innerHTML = `
+          <span>${item.name} (${item.capacity}) x ${item.qty}</span>
+          <span class="font-bold">₹${itemTotal.toLocaleString()}</span>
+        `;
+        list.appendChild(div);
+      });
+
+      document.getElementById("receiptTotalText").innerText = `₹${grandTotal.toLocaleString()}`;
+      document.getElementById("receiptNoText").innerText = `MBP-${Math.floor(1000 + Math.random() * 9000)}`;
+      document.getElementById("receiptDateText").innerText = new Date().toLocaleDateString("en-IN");
+      document.getElementById("receiptModal").classList.remove("hidden");
+    }
+
+    function closeReceiptModal() {
+      document.getElementById("receiptModal").classList.add("hidden");
+    }
+
+    function printReceipt() {
+      window.print();
+    }
+
+    // Color Box Tone Preview Handler
+    function changeColor(hexColor) {
+      const box = document.getElementById('colorPreviewBox');
+      box.style.backgroundColor = hexColor;
+      box.innerText = `Shade Tone: ${hexColor.toUpperCase()}`;
+    }
+
+    // Paint Calculator Logic in Liters
+    function calculatePaintInLiters() {
+      const perimeter = parseFloat(document.getElementById('perimeter').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const coats = parseInt(document.getElementById('coats').value);
+      
+      const resultDiv = document.getElementById('calcResult');
+      const calcArea = document.getElementById('calcArea');
+      const calcLiters = document.getElementById('calcLiters');
+
+      if (!perimeter || !height || perimeter <= 0 || height <= 0) {
+        alert("Please enter valid numbers for wall length and height.");
+        return;
+      }
+
+      const wallArea = perimeter * height;
+      const totalSquareFeet = wallArea * coats;
+      const coveragePerLiter = 100;
+      const litersNeeded = Math.ceil(totalSquareFeet / coveragePerLiter);
+
+      calcArea.textContent = `Total Wall Area (${coats} coat/s): ${totalSquareFeet.toLocaleString()} sq. ft.`;
+      calcLiters.textContent = `Estimated Paint Needed: ${litersNeeded} Liter(s)`;
+      
+      resultDiv.classList.remove('hidden');
+    }
+
+    // Form Submission Handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.textContent = "Thank you! Maa Bhagwati Paints will reach out to you shortly.";
+      status.classList.remove('hidden');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>
